@@ -9,7 +9,7 @@ The code won't be particularly useful unless you have a [SparkFun MicroView](htt
 
 ## Documentation and Contact Information
 
-Documentation (such that there is) can be found in the [source code](https://github.com/profburke/microlife/YYY).
+Documentation (such that there is) can be found in the [source code](https://github.com/profburke/microlife/blob/master/microlife.ino).
 
 The best way to contact me regarding this library is to post an issue at the [github repository](https://github.com/profburke/microlife/issues).
 
