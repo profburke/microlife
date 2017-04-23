@@ -2,7 +2,7 @@
  *
  * microlife
  *
- * Copyright (c) 2014 Matthew M. Burke.
+ * Copyright (c) 2014-2017 Matthew M. Burke.
  *
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -212,12 +212,25 @@ void setup()
 
 
 
+// if MAXGEN is 0, then we don't limit the evolution of the CA
+// otherwise, we reset every MAXGEN steps 
+#define MAXGEN 80
+static uint8_t generation = 0;
 
 void loop() 
 {
   delay(150);
   updateBuffer();
+
+  if (MAXGEN) {
+    generation += 1;
+  }
   showGrid();
+  if (MAXGEN && generation >= MAXGEN) {
+    generation = 0;
+    randomFill(CURRENT, 20);
+  }
 }
+
 
 
